@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AccessChecker — Accessibility Checker</title>
+		<meta
+			name="description"
+			content="Быстро и просто проверьте ваш веб-сайт на accessibility."
+		/>
+
+		<link rel="stylesheet" href="styles/style.css" />
+		<script defer src="js/script.js"></script>
+	</head>
+
+	<body>
+		<!-- Header -->
+		<header class="site-header" data-header>
+			<div class="container header-inner">
+				<a class="brand" href="#top" aria-label="AccessChecker Home">
+					<span class="brand-word brand-word--access">ACCESS</span
+					><span class="brand-word brand-word--checker">CHECKER</span>
+				</a>
+
+				<nav class="nav" aria-label="Primary">
+					<ul class="nav-list">
+						<li>
+							<a class="nav-link is-active" href="#access-checker"
+								>Access Checker</a
+							>
+						</li>
+						<li><a class="nav-link" href="#services">Услуги</a></li>
+						<li><a class="nav-link" href="#stats">Обратная Связь</a></li>
+						<li><a class="nav-link" href="#about">О Нас</a></li>
+					</ul>
+				</nav>
+
+				<div class="header-actions">
+					<button class="lang" type="button" aria-label="Язык: Русский">
+						РУС
+					</button>
+
+					<a class="btn btn-primary" href="#book-demo">Заказать демо</a>
+
+					<button
+						class="burger"
+						type="button"
+						data-burger
+						aria-label="Open menu"
+						aria-expanded="false"
+					>
+						<span class="burger-lines" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+
+			<!-- Mobile panel -->
+			<div class="mobile-panel" data-mobile-panel>
+				<nav class="mobile-nav" aria-label="Mobile">
+					<a class="mobile-link is-active" href="#access-checker"
+						>Access Checker</a
+					>
+					<a class="mobile-link" href="#services">Услуги</a>
+					<a class="mobile-link" href="#stats">Обратная Связь</a>
+					<a class="mobile-link" href="#about">О Нас</a>
+
+					<div class="mobile-bottom">
+						<button
+							class="lang lang--mobile"
+							type="button"
+							aria-label="Language: English"
+						>
+							РУС
+						</button>
+						<a class="btn btn-primary btn--wide" href="#book-demo"
+							>Заказать демо</a
+						>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main class="page-main" id="top">
+			<!-- Hero / First section -->
+			<section class="hero" id="access-checker">
+				<div class="container">
+					<div class="hero-card">
+						<div class="hero-grid">
+							<div class="hero-content">
+								<h1 class="hero-title">
+									<span class="hero-title-accent">Accessibility</span><br />
+									<span class="hero-title-accent">Checker</span><br />
+									<span class="hero-title-regular">Для Вашего</span><br />
+									<span class="hero-title-regular">Веб-сайта</span>
+								</h1>
+
+								<p class="hero-lead">
+									Быстро и просто проверьте ваш веб-сайт на accessibility
+								</p>
+
+								<form class="hero-form" id="analyze-form">
+									<label class="sr-only" for="siteUrl">Website URL</label>
+									<input
+										class="hero-input"
+										id="siteUrl"
+										name="url"
+										type="url"
+										inputmode="url"
+										placeholder="https://вашсайт.com"
+										autocomplete="url"
+                                        required
+									/>
+									<button class="btn btn-secondary" type="submit">
+										Проверить
+									</button>
+								</form>
+                                <p class="hero-status" id="status" aria-live="polite"></p>
+
+								<p class="hero-note">
+									Мы развиваем равенство - равенство в получении доступа к Интернету<br />
+									вне зависимости от ограничений
+								</p>
+							</div>
+
+							<div class="hero-media" aria-hidden="true">
+								
+								<img
+									class="hero-img"
+									src="images/hero-accessibility.png"
+									alt=""
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="site-footer" id="contact" aria-label="Footer">
+  <div class="container">
+    <div class="footer-panel">
+
+      <!-- main footer content -->
+      <div class="footer-main">
+        <div class="footer-left">
+          <p class="footer-question">Что-то<br />заинтересовало?</p>
+          <p class="footer-contact">Будем рады рассказать</p>
+        </div>
+
+        <a class="footer-email" href="mailto:accesschecker@company.com">
+          accesschecker@company.com
+        </a>
+      </div>
+
+      <!-- bottom row -->
+      <div class="footer-bottom">
+        <p class="footer-copy">© <span data-year>2026</span> AccessChecker</p>
+
+        <div class="footer-legal" aria-label="Legal links">
+          <a class="footer-legal-link" href="cookie-policy.html">Cookie Policy</a>
+          <a class="footer-legal-link" href="privacy-policy.html">Privacy Policy</a>
+          <a class="footer-legal-link" href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+	</body>
+</html>
