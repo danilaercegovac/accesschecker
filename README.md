@@ -22,4 +22,4 @@ Accessibility Checker — это API-сервис для проверки веб
 
 3. Запустите сервер:
 
-`npm install`
+`npm start`
