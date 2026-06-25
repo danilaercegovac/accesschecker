@@ -1,0 +1,27 @@
+@startuml
+
+actor Пользователь
+participant "Веб-интерфейс" as UI
+participant "API" as API
+participant "Модуль анализа" as Analyzer
+participant "PDF-генератор" as PDF
+
+Пользователь -> UI : Ввод URL
+Пользователь -> UI : Запуск анализа
+
+UI -> API : POST /api/analyze
+
+API -> Analyzer : Передача URL
+
+Analyzer -> Analyzer : Загрузка HTML-страницы
+Analyzer -> Analyzer : Проверка требований доступности
+Analyzer --> API : Результаты проверки
+
+API -> PDF : Формирование отчёта
+PDF --> API : PDF-файл
+
+API --> UI : PDF-отчёт
+
+UI --> Пользователь : Загрузка PDF
+
+@enduml
